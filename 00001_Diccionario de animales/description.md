@@ -3,9 +3,7 @@
 Ayuda: len() devuelve la cantidad de elementos que posee el objeto por el que se pregunta
 
 ``` pyhton
-animales = ['ballena', 'platielminte', 'gallina']
+animales = ['ballena', 'elefante', 'gallina']
 
 mi_diccionario = {x:len(x) in animales}
-
-
 ```
