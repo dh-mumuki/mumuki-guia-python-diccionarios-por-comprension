@@ -1,37 +1,37 @@
-### Diccionarios por comprensión
+Los **diccionarios por comprensión** tienen una motivación similar a la de las listas por comprensión. Como vimos en la [lección anterior](https://mumuki.io/data-science.digitalhouse/lessons/415-nivelacion-python-listas-por-comprension), el código es más resumido, claro y eficiente. La diferencia es que es ahora volcaremos los datos dentro de un diccionario en lugar de una lista.
 
-Los diccionarios por comprensión tienen una motivación similar al de las listas por comprensión, al igual que las listas el código es mas resumido y claro, la diferencia es que es posible desplegar los datos dentro de un diccionario.
+Vimos que una diferencia importante entre las listas y los diccionarios es la forma en la que se accede a los elementos que contienen. Como las listas son colecciones ordenadas, podemos acceder a sus elementos a partir del índice que marca su posición en la lista. Los diccionarios, por el contrario, no se encuentran ordenados, sino que se estructuran a partir de pares **clave:valor**; para acceder al valor de un elemento en particular, basta con hacer un llamado a la clave única que lo identifica.
 
-Vimos que la principal diferencia entre una lista y un diccionario es la forma en la que se accede a los distintos elementos: en la lista es un acceso numérico y en el diccionario se accede por llave.
-
-Recordemos como funcionaba el diccionario.
+Recordemos cómo trabajamos con un diccionario:
 
 ``` python
-# se definen los elementos del diccionario como par llave:valor.
-mi_dict = {'llave_1' : 123, 'llave_2': 100, 'llave_3' : 311 }
+# Se definen los elementos del diccionario como pares clave:valor
+mi_dict = {'clave_1': 123, 'clave_2': 100, 'clave_3': 311}
 
-# se accede a un elemento del diccionario a través de su llave.
-mi_dict['llave_2']
+# Se accede a un valor particular a través de su clave
+mi_dict['clave_2']
+
+ム
+> 100
 ```
- _Salida:_
-**>100**
 
+Al igual que las listas por comprensión, un dicionario por comprensión requiere trabajar con un **iterable**.
 
-Al igual que las listas por comprensión, el dicionario requiere trabajar con un **iterable**.
-
-Veamos la sintaxis general para la definición de un diccionario.
+Veamos la sintaxis general para la definición de un diccionario por comprensión:
 
 ``` python
-{ expresion_para_llave : expresion_para_valor for elemento in iterable}
+{**expresión_para_clave** : **expresión_para_valor** for **elemento** in **iterable** [if **condición**]}
 ```
-Como podemos ver en la sintaxis, lo nuevo es que ahora debemos ocuparnos también de las llaves, la dificultad adicional al uso del diccionario con respecto a la lista por comprensión, puede venir dada por la definición de las llaves.
+Como podemos ver en la sintaxis, lo nuevo es que ahora debemos ocuparnos también de las claves.
 
-Las partes del diccionario por comprensión son:
+Vamos a explicar de forma ordenada cómo funciona la sintaxis de los diccionarios por comprensión:
 
-  * **expresion_para_llave** : es una expresión que define a la llave, esta expresión debe dar como resultado una llave diferente durante cada iteración, ya que en un diccionario nos encontramos con la restricción de que la llave no debe repetirse
-  * `:` : los dos puntos separan la expresión de la llave, con la expresión que da lugar al valor para esa llave.
-  * **expresion_para_valor** : es la expresión que define el valor para una llave dada, funciona igual que en la lista por comprensión.
-  * `for`: es el llamado al `for`, al igual que en la lista por comprensión.
-  * `elemento`: es el nombre con el que definimos a cada elemento del iterable durante cada iteración (igual que en la lista)
-  * `in`: indica sobre que vamos a iterar.
-  * `iterable`: es el objeto que vamos a recorrer.
+  * **expresión_para_clave** : es una expresión que define a la clave; debe dar como resultado una clave diferente durante cada iteración, ya que en un diccionario nos encontramos con la restricción de que las claves no deben repetirse.
+  * `:` : los dos puntos separan la expresión de la clave de la expresión que da lugar al valor asociado.
+  * **expresión_para_valor** : es la expresión que define el valor para una clave dada; funciona igual que en las listas por comprensión.
+  * `for`: da inicio a un bucle, al igual que en las listas por comprensión.
+  * **elemento**: es el nombre de la variable a la que asignamos cada elemento del iterable durante cada iteración (igual que en las listas por comprensión).
+  * `in`: indica sobre qué vamos a iterar.
+  * **iterable**: es el objeto que vamos a recorrer.
+  * `if`: señala la expresión condicional que vamos a evaluar sobre los elementos del iterable que recorremos (al igual que en las listas por comprensión, su inclusión resulta opcional).
+  * **condición**: es el condicional que va a ser evaluado.
