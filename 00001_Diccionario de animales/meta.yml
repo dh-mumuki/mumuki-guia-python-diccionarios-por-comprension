@@ -1,6 +1,6 @@
 ---
 tags: []
-layout: input_bottom
+layout: input_right
 editor: multiple_choice
 type: problem
 extra_visible: false
@@ -8,7 +8,7 @@ language: text
 manual_evaluation: false
 choices:
 - !ruby/hash:ActiveSupport::HashWithIndifferentAccess
-  value: "{'ballena': 7, 'gallina': 7, 'elefante': 8}"
+  value: "{'ballena': 7, 'elefante': 8, 'gallina': 7}"
   checked: true
 - !ruby/hash:ActiveSupport::HashWithIndifferentAccess
   value: "{'ballena': 3, 'gallina': 3, 'elefante': 3}"
@@ -20,6 +20,6 @@ choices:
   value: "{['ballena', 'gallina',  'elefante']:3}"
   checked: false
 - !ruby/hash:ActiveSupport::HashWithIndifferentAccess
-  value: Devuelve error, ya la lista no puede ser una llave.
+  value: Devuelve error, ya que la lista no puede ser una llave.
   checked: false
 name: Diccionario de animales
